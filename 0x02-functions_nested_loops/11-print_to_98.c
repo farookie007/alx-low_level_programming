@@ -21,6 +21,7 @@ void print_to_98(int n)
 			_putchar('\n');
 			return;
 		}
+		_putchar(',');
 		_putchar(' ');
 	}
 	for (; n >= 98; n--)
@@ -31,10 +32,12 @@ void print_to_98(int n)
 			_putchar('\n');
 			return;
 		}
+		_putchar(',');
 		_putchar(' ');
 	}
 	_putchar('\n');
 }
+
 /**
  * _pnum - Prints a number
  * @n: the number
@@ -43,6 +46,25 @@ void print_to_98(int n)
  */
 void  _pnum(int n)
 {
-	_putchar('0' + n / 10);
+	if (n < 0)
+		putchar('-');
+		n = _abs(n);
+	if (n > 99 && n < 999)
+		_putchar('0' + n / 100);
+	if (n > 9 && n < 99)
+		_putchar('0' + n / 10);
 	_putchar('0' + n % 10);
+}
+
+/**
+ * _abs - Return the absolute value of an integer
+ * @n: parameter to be evaluated
+ *
+ * Return: a +ve integer value always
+ */
+int _abs(int n)
+{
+	if (n < 0)
+		return (n * -1);
+	return (n);
 }
