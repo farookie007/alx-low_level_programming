@@ -34,4 +34,3 @@ void  _pnum(int n)
 	_putchar('0' + n / 10);
 	_putchar('0' + n % 10);
 }
-void _pnum(int);
