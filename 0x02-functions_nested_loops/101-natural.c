@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 
+int _is_3x(int);
+int _is_5x(int);
+
 /**
  * main - prints all multiple of 3 or 5 less than 1024
  *
@@ -19,7 +22,6 @@ int main(void)
 		}
 	}
 
-	
 	return (0);
 }
 
