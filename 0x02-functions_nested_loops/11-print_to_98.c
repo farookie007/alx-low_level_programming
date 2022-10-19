@@ -47,8 +47,10 @@ void print_to_98(int n)
 void  _pnum(int n)
 {
 	if (n < 0)
-		putchar('-');
+	{
+		_putchar('-');
 		n = _abs(n);
+	}
 	if (n > 99 && n < 999)
 		_putchar('0' + n / 100);
 	if (n > 9 && n < 99)
