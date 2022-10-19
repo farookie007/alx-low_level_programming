@@ -15,12 +15,11 @@ int print_sign(int n)
 		{
 			putchar('1');
 			return (1);
-		} else
-		{
-			_putchar('-');
-			_putchar('1');
-			return (-1)
 		}
+		_putchar('-');
+		_putchar('1');
+		return (-1);
 	}
 	_putchar(0);
 	return (0);
+}
