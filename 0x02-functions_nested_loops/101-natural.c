@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 int _is_3x(int);
 int _is_5x(int);
@@ -33,7 +32,7 @@ int main(void)
  */
 int _is_3x(int n)
 {
-	return (!(n % 3));
+	return ((n % 3) == 0);
 }
 
 /**
@@ -44,5 +43,5 @@ int _is_3x(int n)
  */
 int _is_5x(int n)
 {
-	return (!(n % 5));
+	return ((n % 5) == 0);
 }
