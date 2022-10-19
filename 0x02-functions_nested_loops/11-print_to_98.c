@@ -9,19 +9,29 @@ void print_to_98(int n)
 {
 	if (n == 98)
 	{
-		_putchar('0' + n / 10);
-		_putchar('0' + n % 10);
+		_pnum(98);
+		_putchar('\n');
 		return;
 	}
 	for (; n <= 98; n++)
 	{
-		_putchar('0' + n / 10);
-		_putchar('0' + n % 10);
+		_pnum(98);
 	}
-	for(; n >= 98; n--)
+	for (; n >= 98; n--)
 	{
-		_putchar('0' + n / 10);
-		_putchar('0' + n % 10);
+		_pnum(98);
 	}
 	_putchar('\n');
 }
+/**
+ * _pnum - Prints a number
+ * @n: the number
+ *
+ * Return: the number printed as characters
+ */
+void  _pnum(int n)
+{
+	_putchar('0' + n / 10);
+	_putchar('0' + n % 10);
+}
+void _pnum(int);
