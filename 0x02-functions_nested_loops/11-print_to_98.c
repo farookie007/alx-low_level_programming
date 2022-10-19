@@ -13,12 +13,12 @@ void print_to_98(int n)
 		_putchar('0' + n % 10);
 		return;
 	}
-	for (n; n <= 98; n++)
+	for (; n <= 98; n++)
 	{
 		_putchar('0' + n / 10);
 		_putchar('0' + n % 10);
 	}
-	for(n; n >= 98; n--)
+	for(; n >= 98; n--)
 	{
 		_putchar('0' + n / 10);
 		_putchar('0' + n % 10);
