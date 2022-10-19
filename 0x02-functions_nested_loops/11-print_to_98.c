@@ -9,17 +9,29 @@ void print_to_98(int n)
 {
 	if (n == 98)
 	{
-		_pnum(98);
+		_pnum(n);
 		_putchar('\n');
 		return;
 	}
 	for (; n <= 98; n++)
 	{
-		_pnum(98);
+		_pnum(n);
+		if (n == 98)
+		{
+			_putchar('\n');
+			return;
+		}
+		_putchar(' ');
 	}
 	for (; n >= 98; n--)
 	{
-		_pnum(98);
+		_pnum(n);
+		if (n == 98)
+		{
+			_putchar('\n');
+			return;
+		}
+		_putchar(' ');
 	}
 	_putchar('\n');
 }
