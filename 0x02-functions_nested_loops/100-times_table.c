@@ -42,7 +42,7 @@ void  _pnum(int n)
 	{
 		_putchar('-');
 		n = _abs(n);
-	}}
+	}
 
 	if (n > 99 && n < 1000)
 	{
