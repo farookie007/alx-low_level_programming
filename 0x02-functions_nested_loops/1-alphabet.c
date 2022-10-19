@@ -1,11 +1,10 @@
 #include "main.h"
 /**
- * Function `print_alphabet`: prints all letters of the English
+ * print_alphabet - prints all letters of the English
  * alphabet in lowercase
  *
  * Return: Void (Success)
  */
-
 void print_alphabet(void)
 {
 	int i;
