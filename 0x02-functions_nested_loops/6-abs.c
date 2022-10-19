@@ -7,6 +7,7 @@
  */
 int _abs(int n)
 {
-	return (((n < 0) && (n * -1)) || n);
-	/* don't ask me how it did the job *smiles* */
+	if (n < 0)
+		return (n * -1);
+	return (n);
 }
