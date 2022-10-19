@@ -13,3 +13,5 @@ int add(int, int);
 void print_to_98(int n);
 void _pnum(int);
 void print_times_table(int n);
+int _is_3x(int);
+int is_5x(int);
