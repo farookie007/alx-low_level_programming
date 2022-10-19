@@ -19,7 +19,7 @@ void times_table(void)
 				_putchar('0' + mul % 10);
 			} else
 			{
-				if (x != 0 && y != 0)
+				if (!(x && y))
 					_putchar(' ');
 				_putchar('0' + mul);
 			}
