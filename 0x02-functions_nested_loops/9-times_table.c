@@ -19,7 +19,8 @@ void times_table(void)
 				_putchar('0' + mul % 10);
 			} else
 			{
-				_putchar(' ');
+				if (x != 0 && y != 0)
+					_putchar(' ');
 				_putchar('0' + mul);
 			}
 			if (y < 9)
