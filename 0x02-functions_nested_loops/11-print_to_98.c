@@ -51,9 +51,12 @@ void  _pnum(int n)
 		_putchar('-');
 		n = _abs(n);
 	}
-	if (n > 99 && n < 999)
+	if (n > 99 && n < 1000)
+	{
 		_putchar('0' + n / 100);
-	if (n > 9 && n < 99)
+		n %= 100;
+	}
+	if (n > 9 && n < 100)
 		_putchar('0' + n / 10);
 	_putchar('0' + n % 10);
 }
