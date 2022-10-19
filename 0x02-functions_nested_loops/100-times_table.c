@@ -41,7 +41,10 @@ void  _pnum(int n)
 		n = _abs(n);
 	}
 	if (n == 0)
+	{
 		_putchar('0');
+		return;
+	}
 
 	if (n > 99 && n < 1000)
 	{
