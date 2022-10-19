@@ -13,7 +13,10 @@ void print_times_table(int n)
 	{
 		for (y = 0; y <= n; y++)
 		{
-			_pnum(x * y);
+			if (y == 0)
+				_putchar('0');
+			else
+				_pnum(x * y);
 
 			if (y < n)
 			{
@@ -39,12 +42,7 @@ void  _pnum(int n)
 	{
 		_putchar('-');
 		n = _abs(n);
-	}
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
+	}}
 
 	if (n > 99 && n < 1000)
 	{
