@@ -11,10 +11,16 @@ int print_sign(int n)
 {
 	if (n != 0)
 	{
-		if (n < 0)
-			_putchar('-');/* adds the -ve sign if n is less than zero */
-		_putchar((n > 0) || (n < 0));/* always return 1 */
-		return ((n > 0) || ((n < 0) * -1));/* returns 1 or -1 if n is -ve */
+		if (n > 0)
+		{
+			putchar('1');
+			return (1);
+		} else
+		{
+			_putchar('-');
+			_putchar('1');
+			return (-1)
+		}
 	}
 	_putchar(0);
 	return (0);
