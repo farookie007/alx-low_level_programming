@@ -24,7 +24,7 @@ void fib(void)
 {
 	int i;
 	long int val;
-	long int result = 0;
+	long int result = 2;
 	long int values[2] = {1, 2};
 
 	for (i = 1; i; i++)
