@@ -15,3 +15,4 @@ void _pnum(int);
 void print_times_table(int n);
 int _is_3x(int);
 int is_5x(int);
+void fib(int n);
