@@ -24,22 +24,22 @@ int main(void)
 void fib(int n)
 {
 	int i;
-	long long int val;
-	long long int values[2] = {1, 2};
+	long int val;
+	long int values[2] = {1, 2};
 
 	for (i = 1; i <= n; i++)
 	{
 		if (i == 1)
 		{
-			printf("%lld", values[0]);
+			printf("%ld", values[0]);
 		} else if (i == 2)
 		{
-			printf("%lld", values[1]);
+			printf("%ld", values[1]);
 		}
 		else
 		{
 			val = values[0] + values[1];
-			printf("%lld", val);
+			printf("%ld", val);
 			values[0] = values[1];
 			values[1] = val;
 		}
