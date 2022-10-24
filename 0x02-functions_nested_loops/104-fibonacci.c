@@ -10,7 +10,7 @@ void fib(int n);
  */
 int main(void)
 {
-	fib(100);
+	fib(98);
 
 	return (0);
 }
@@ -24,22 +24,22 @@ int main(void)
 void fib(int n)
 {
 	int i;
-	long int val;
-	long int values[2] = {1, 2};
+	long long int val;
+	long long int values[2] = {1, 2};
 
 	for (i = 1; i <= n; i++)
 	{
 		if (i == 1)
 		{
-			printf("%ld", values[0]);
+			printf("%lld", values[0]);
 		} else if (i == 2)
 		{
-			printf("%ld", values[1]);
+			printf("%lld", values[1]);
 		}
 		else
 		{
 			val = values[0] + values[1];
-			printf("%ld", val);
+			printf("%lld", val);
 			values[0] = values[1];
 			values[1] = val;
 		}
