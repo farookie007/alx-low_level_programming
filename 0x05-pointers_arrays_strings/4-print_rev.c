@@ -12,8 +12,6 @@ void print_rev(char *s)
 	int len = _strlen(s);
 
 	rev_string(s);
-	write(1, s, len);
-	write(1, "\n", 1);
 }
 
 /**
@@ -34,7 +32,7 @@ void rev_string(char *s)
 		arr[i] = *(s - i);
 	}
 	arr[len] = '\0';
-	s = arr;
+	printf("%s\n", arr);
 }
 
 /**
