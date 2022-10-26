@@ -22,7 +22,7 @@ void print_rev(char *s)
  *
  * Return: char
  */
-char _revstr(*s)
+char _revstr(char *s)
 {
 	int len = _strlen(s);
 	int end = len - 1;
