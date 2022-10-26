@@ -9,8 +9,8 @@
  */
 void print_rev(char *s)
 {
-	char new_str[] = _revstr(*s);
-	int len = _strlen(*s);
+	char new_str[] = _revstr(s);
+	int len = _strlen(s);
 
 	write(1, new_str, len);
 	write(1, "\n", 1);
@@ -24,7 +24,7 @@ void print_rev(char *s)
  */
 char _revstr(*s)
 {
-	int len = _strlen(*s);
+	int len = _strlen(s);
 	int end = len - 1;
 	char arr[];
 	int i;
