@@ -1,5 +1,5 @@
 #include "main.h"
-#include <unistd.h>
+#include <stdio.h>
 
 /**
  * print_rev - prints a string in reverse followed by a neewline
@@ -9,8 +9,6 @@
  */
 void print_rev(char *s)
 {
-	int len = _strlen(s);
-
 	rev_string(s);
 }
 
