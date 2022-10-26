@@ -25,12 +25,13 @@ void print_rev(char *s)
 char _revstr(*s)
 {
 	int len = _strlen(*s);
-	char arr[len];
+	int end = len - 1;
+	char arr[];
 	int i;
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i <= end; i++)
 	{
-		arr[i] = s[len - 1 - i];
+		arr[i] = *(s - i);
 	}
 	arr[len] = '\0';
 	return (arr);
@@ -44,12 +45,9 @@ char _revstr(*s)
  */
 int _strlen(char *s)
 {
-	int i;
-	int counter = 0;
+	int count = 0;
 
-	for (i = 0; s[i]; i++)
-	{
-		counter++;
-	}
-	return (counter);
+	while (s[count])
+		count++;
+	return (count)
 }
