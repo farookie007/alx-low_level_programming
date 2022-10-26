@@ -21,11 +21,10 @@ void print_rev(char *s)
 void rev_string(char *s)
 {
 	int len = _strlen(s);
-	int end = len - 1;
-	char arr[1000];
+	char *arr = malloc((len + 1) * sizeof(char));
 	int i;
 
-	for (i = 0; i <= end; i++)
+	for (i = 0; i <= (len - 1); i++)
 	{
 		arr[i] = *(s - i);
 	}
