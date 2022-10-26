@@ -9,24 +9,24 @@
  */
 void print_rev(char *s)
 {
-	char new_str[] = _revstr(s);
 	int len = _strlen(s);
 
+	rev_string(s);
 	write(1, new_str, len);
 	write(1, "\n", 1);
 }
 
 /**
- * _revstr - reverses a string and returns it
+ * rev_string - reverses a string and returns it
  * @s: the string to be reversed
  *
  * Return: char
  */
-char _revstr(char *s)
+void rev_string(char *s)
 {
 	int len = _strlen(s);
 	int end = len - 1;
-	char arr[];
+	char arr[1000];
 	int i;
 
 	for (i = 0; i <= end; i++)
@@ -34,7 +34,7 @@ char _revstr(char *s)
 		arr[i] = *(s - i);
 	}
 	arr[len] = '\0';
-	return (arr);
+	s = arr;
 }
 
 /**
