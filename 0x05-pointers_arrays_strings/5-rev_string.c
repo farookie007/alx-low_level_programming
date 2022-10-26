@@ -18,7 +18,10 @@ void rev_string(char *s)
 		arr[i] = *(s - i);
 	}
 	arr[len] = '\0';
-	s = arr;
+	for (i = 0; arr[i]; i++)
+	{
+		*(s + i) = arr[i];
+	}
 }
 
 /**
