@@ -11,7 +11,11 @@
 void puts_half(char *str)
 {
 	int i;
-	int half = strlen(str) / 2;
+	int len = strlen(str);
+	int half = len / 2;
+
+	if (len % 2 != 0)
+		half++;
 
 	for (i = half; str[i]; i++)
 	{
