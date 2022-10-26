@@ -20,3 +20,18 @@ void rev_string(char *s)
 	arr[len] = '\0';
 	s = arr;
 }
+
+/**
+ * _strlen - Returns the length of the string argument
+ * @s: pointer to the string address
+ *
+ * Return: the length as an integer
+ */
+int _strlen(char *s)
+{
+	int count = 0;
+
+	while (s[count])
+		count++;
+	return (count);
+}
