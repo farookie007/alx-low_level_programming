@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _strcat - concatenates the arguments
  * @src: the source string
