@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 
-char *_rev(char*);
+void rev_string(char*);
 /**
  * print_rev - reverses a string and returns it
  * @s: the string to be reversed
@@ -11,16 +11,20 @@ char *_rev(char*);
  */
 void print_rev(char *s)
 {
-	printf("%s\n", _rev(s));
+	char a[800];
+
+	strcpy(a, s);
+	rev_string(a);
+	printf("%s\n", a);
 }
 
 /**
- * _rev - reverses a string and return the reversed string
- * @s: the string
+ * rev_string - reverses a string and returns it
+ * @s: the string to be reversed
  *
- * Return: char*
+ * Return: void
  */
-char *_rev(char *s)
+void rev_string(char *s)
 {
 	int i, j, end;
 	char str[800];
@@ -32,8 +36,6 @@ char *_rev(char *s)
 	j = end;
 	for (; i <= end; i++, j--)
 	{
-		str[i] = s[j];
+		s[i] = str[j];
 	}
-
-	return (str);
 }
