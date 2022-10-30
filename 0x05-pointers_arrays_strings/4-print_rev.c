@@ -2,7 +2,8 @@
 #include <string.h>
 #include <stdio.h>
 
-void rev_string(char*);
+void rev_string(char *);
+
 /**
  * print_rev - reverses a string and returns it
  * @s: the string to be reversed
