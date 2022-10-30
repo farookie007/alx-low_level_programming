@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * rev_string - reverses a string and returns it
@@ -8,19 +9,17 @@
  */
 void rev_string(char *s)
 {
-	int len = _strlen(s);
-	int end = len - 1;
-	char arr[1000];
-	int i;
+	int i, j, end;
+	char str[800];
 
-	for (i = 0; i <= end; i++)
+	strcpy(str, s);
+
+	end = strlen(s) - 1;
+	i = 0;
+	j = end;
+	for (i, j; i <= end; i++, j--)
 	{
-		arr[i] = *(s - i);
-	}
-	arr[len] = '\0';
-	for (i = 0; arr[i]; i++)
-	{
-		*(s + i) = arr[i];
+		s[i] = str[j];
 	}
 }
 
@@ -30,6 +29,7 @@ void rev_string(char *s)
  *
  * Return: the length as an integer
  */
+/*
 int _strlen(char *s)
 {
 	int count = 0;
@@ -38,3 +38,4 @@ int _strlen(char *s)
 		count++;
 	return (count);
 }
+*/
