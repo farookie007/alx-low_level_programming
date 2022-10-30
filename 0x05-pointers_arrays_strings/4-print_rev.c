@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 
+char *_rev(char*);
 /**
  * print_rev - reverses a string and returns it
  * @s: the string to be reversed
@@ -9,6 +10,17 @@
  * Return: char
  */
 void print_rev(char *s)
+{
+	printf("%s\n", _rev(s));
+}
+
+/**
+ * _rev - reverses a string and return the reversed string
+ * @s: the string
+ *
+ * Return: char*
+ */
+char *_rev(char *s)
 {
 	int i, j, end;
 	char str[800];
@@ -20,8 +32,8 @@ void print_rev(char *s)
 	j = end;
 	for (; i <= end; i++, j--)
 	{
-		s[i] = str[j];
+		str[i] = s[j];
 	}
 
-	printf("%s\n", s);
+	return (*(str + 0));
 }
