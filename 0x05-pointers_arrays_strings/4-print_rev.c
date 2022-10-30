@@ -35,5 +35,5 @@ char *_rev(char *s)
 		str[i] = s[j];
 	}
 
-	return (*(str + 0));
+	return (str);
 }
