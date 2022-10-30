@@ -3,7 +3,7 @@
 /**
  * main - the fizzbuzz program
  *
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -12,7 +12,7 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		/* checks if i is divisible by 3 or 5 */
-		if(!(i % 3) || !(i % 5))
+		if (!(i % 3) || !(i % 5))
 		{
 			if (!(i % 3))
 				printf("Fizz");
@@ -24,4 +24,5 @@ int main(void)
 		}
 		printf(" ");
 	}
+	return (0);
 }
