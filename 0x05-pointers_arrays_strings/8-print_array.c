@@ -11,12 +11,17 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i <= n; i++)
 	{
-		printf("%d", *(a + i));
+		printf("%d", *(a + i));/* prints the ith element of the array a */
 		if (i == n - 1)
+		{
 			printf("\n");
+			return;
+		}
 		else
+		{
 			printf(", ");
+		}
 	}
 }
