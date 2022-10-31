@@ -8,33 +8,26 @@
  */
 void print_triangle(int size)
 {
-	int i, j;
+	int space, hash;
 
-	for (i = size; i >= 0; i--)
+	hash = 1;
+	space = size - 1;
+	for (; hash <= size; hash++, space--)
 	{
-		j = 1;
-		while (j <= i - 1)
+		/* prints the required number of spaces */
+		while (space > 0)
 		{
 			_putchar(' ');
-			j++;
+			space--;
 		}
-		while (j >= i && j <= size)
+		/* prints the required number of hashes */
+		while (hash > 0)
 		{
 			_putchar('#');
-			j++;
+			hash--;
 		}
 		_putchar('\n');
 	}
 	if (size <= 0)
 		_putchar('\n');
-}
-
-void print_triangle(int size)
-{
-	int i;
-
-	for (i = 1, j = size; i <= size; i++, j--)
-	{
-
-	}
 }
