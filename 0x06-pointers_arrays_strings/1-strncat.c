@@ -8,15 +8,16 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
-	int len = 0;
-
-	while (dest[i++])
-		len++;
+	int i;
+	int len = strlen(dest);
 
 	for (i = 0; src[i] && i < n; i++)
 	{
-		dest[len++] = *(src + i);
+		/* concatenating the characters in src to dest */
+		*(dest + len + i) = src[i];
 	}
+	/* making the last character in dest the null character */
+	*(dest + len + i) = '\0';
+
 	return (dest);
 }
