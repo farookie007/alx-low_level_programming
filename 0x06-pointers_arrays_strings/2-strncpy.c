@@ -14,11 +14,9 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0; src[i] && i < n; i++)
 	{
-		/* putting the characters in src in dest */
+		/* putting the characters from src into corresponding index in dest */
 		*(dest + i) = src[i];
 	}
-	/* making the last character in dest the null character */
-	*(dest + i) = '\0';
 
 	return (dest);
 }
