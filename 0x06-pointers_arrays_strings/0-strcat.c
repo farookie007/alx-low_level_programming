@@ -1,3 +1,5 @@
+#include <string.h>
+
 /**
  * _strcat - concatenates the arguments
  * @src: the source string
@@ -7,14 +9,14 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
-	int len = 0;
+	int i;
+	int len = strlen(src);
 
-	while (*(dest++))
-		len++;
-
-	for (i = 0; *(src + i); i++)
-		dest[len++] = *(src + i);
+	for (i = 0; src[i]; i++)
+	{
+		dest[len + i] = src[i];
+	}
+	dest[i] = '\0';
 
 	return (dest);
 }
