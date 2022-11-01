@@ -1,4 +1,4 @@
-#include "main.h"
+#include <string.h>
 
 /**
  * _strncpy - copies a string
@@ -12,19 +12,13 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
-	i = 0;
-
-	while (src[i] != '\0' && i < n)
+	for (i = 0; src[i] && i < n; i++)
 	{
-		dest[i] = src[i];
-		i++;
+		/* putting the characters in src in dest */
+		*(dest + i) = src[i];
 	}
-
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
+	/* making the last character in dest the null character */
+	*(dest + i) = '\0';
 
 	return (dest);
 }
