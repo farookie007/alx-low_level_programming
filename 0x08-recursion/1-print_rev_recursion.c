@@ -11,7 +11,7 @@ void _puts_recursion(char *s);
  */
 void *_rev(char *s)
 {
-	char str[900];
+	char str[500];
 	int j = 0;
 	int i = strlen(s) - 1;
 
@@ -19,6 +19,7 @@ void *_rev(char *s)
 
 	for (; s[i]; i--, j++)
 		*(s + j) = str[i];
+	return;
 }
 
 /**
