@@ -3,13 +3,14 @@
 
 void _puts_recursion(char *s);
 
+
 /**
  * _rev - reverses a string
  * @s: the string to be reversed
  *
  * Return: void
  */
-void *_rev(char *s)
+void _rev(char *s)
 {
 	char str[500];
 	int j = 0;
@@ -19,7 +20,6 @@ void *_rev(char *s)
 
 	for (; s[i]; i--, j++)
 		*(s + j) = str[i];
-	return;
 }
 
 /**
