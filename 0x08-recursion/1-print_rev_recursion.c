@@ -19,7 +19,7 @@ void *_rev(char *s)
 
 	for (; s[i]; i--, j++)
 	{
-		*(s + j) = str[i]
+		*(s + j) = str[i];
 	}
 }
 
