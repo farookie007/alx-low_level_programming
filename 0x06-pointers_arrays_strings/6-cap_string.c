@@ -1,31 +1,32 @@
-#include "main.h"
-
 /**
  * cap_string - capitalizes everey word of a string
- * @s: string to modify
+ * @s: the string to be modified
  *
- * Return: the resulting string
+ * Return: the modified string
  */
 char *cap_string(char *s)
 {
-	int i, j;
+	int i, j, diff;
+	char punc[14] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}', '\0'};
 
-	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
-		'!', '?', '"', '(', ')', '{', '}'};
+	diff = 32;
 
-	for (i = 0; s[i] != '\0'; i++)
+	/* capitalize the first character of the string */
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] -= diff;
+
+	for (i = 0; s[i]; i++)
 	{
-		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
-			s[i] -= 32;
-
-		for (j = 0; j < 13; j++)
+		for (j = 0; punc[j]; j++)
 		{
-			if (s[i] == spe[j])
+			/* checks if the current character is a punctuation */
+			/* and if the following character is in lowercase */
+			if ((s[i] == punc[j]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
 			{
-				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
-				{
-					s[i + 1] -= 32;
-				}
+				/* converts the following character to an uppercase */
+				s[i + 1] -= diff;
+				break;
 			}
 		}
 	}
