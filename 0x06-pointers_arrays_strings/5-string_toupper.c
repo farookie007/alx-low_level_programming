@@ -12,7 +12,7 @@ char *string_toupper(char *s)
 	for (i = 0; s[i]; i++)
 	{
 		/* check if the character is in lowercase */
-		if ('a' <= s[i] <= 'z')
+		if (s[i] >= 'a' && s[i] <= 'z')
 			/* converts it to the uppercase equivalent */
 			s[i] -= 32;
 	}
