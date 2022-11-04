@@ -12,7 +12,7 @@ void _print_rev_recursion(char *s)
 	{
 		/* executing the recursion first */
 		/* so the string doesn't get printed until the last recursion */
-		_print_rev_recursion(s++);
+		_print_rev_recursion(++s);
 		printf("%c", *s);
 	}
 }
