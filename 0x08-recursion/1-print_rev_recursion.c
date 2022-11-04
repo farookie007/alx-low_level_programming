@@ -20,6 +20,6 @@ void _print_rev_recursion(char *s)
 	{
 		printf("%c", *(s--));
 		l--;
-		_puts_recursion(s);
+		_print_rev_recursion(s);
 	}
 }
