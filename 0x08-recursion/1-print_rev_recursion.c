@@ -18,9 +18,7 @@ void *_rev(char *s)
 	strcpy(str, s);
 
 	for (; s[i]; i--, j++)
-	{
 		*(s + j) = str[i];
-	}
 }
 
 /**
