@@ -8,14 +8,11 @@
  */
 void _print_rev_recursion(char *s)
 {
-	static int i = strlen(s);
-
-	if (i == 0)
+	if (*s)
 	{
-		printf("\n");
-	} else
-	{
-		printf("%c", s[i--]);
-		_print_rev_recursion(s);
+		/* executing the recursion first */
+		/* so the string doesn't get printed until the last recursion */
+		_print_rev_recursion(s++);
+		printf("%c", *s);
 	}
 }
