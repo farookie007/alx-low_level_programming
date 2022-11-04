@@ -1,12 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
 /**
  * _print_rev_recursion - prints a string in reverse
  * @s: string to print
+ * Return: void
  */
 void _print_rev_recursion(char *s)
 {
-	if (*s)
+	static int i = strlen(s);
+
+	if (i == 0)
 	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
+		printf("\n");
+	} else
+	{
+		printf("%c", s[i--]);
+		_print_rev_recursion(s);
 	}
 }
