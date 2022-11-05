@@ -27,5 +27,5 @@ int _prime(int n, int i)
 		return (1);
 	if ((n % i == 0) || (i > n / 2))
 		return (0);
-	return (_prime(n, ++i));
+	return (_prime(n, i + 1));
 }
