@@ -28,6 +28,6 @@ int _sqrt(int n, int i)
 		return (-1);
 	/* returns the factor if it's the square root */
 	if ((i * i) == n)
-		return (i)
+		return (i);
 	return _sqrt(n, ++i);
 }
