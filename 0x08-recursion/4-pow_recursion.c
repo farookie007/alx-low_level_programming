@@ -1,5 +1,5 @@
 /**
- * int _pow_recursion - calculates x raised to the power of y recursively
+ * _pow_recursion - calculates x raised to the power of y recursively
  * @x: the number
  * @y: the power
  *
