@@ -10,10 +10,10 @@
  */
 char *_strchr(char *s, char c)
 {
-		while (*s)
+		while (1)
 		{
 			/* checks if the string ended and returns NULL */
-			if (!(*s))
+			if (*s == '\0')
 				return (NULL);
 			/* checks if the value is char c and returns the address */
 			if (*s == c)
