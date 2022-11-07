@@ -9,8 +9,8 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	/* replacing the bytes from n-1 index in dest with the src correspondence */
-	while (n > 0)
-		dest[--n] = src[n];
+	while (n-- > 0)
+		dest[n] = src[n];
 
 	return (dest);
 }
