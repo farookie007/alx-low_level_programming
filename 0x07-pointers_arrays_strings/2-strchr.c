@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * *_strchr - locates a character in a string
  * @s: string to search
@@ -11,7 +13,7 @@ char *_strchr(char *s, char c)
 		while (*s)
 		{
 			/* checks if the string ended and returns NULL */
-			if (*s == '\0')
+			if (!(*s))
 				return (NULL);
 			/* checks if the value is char c and returns the address */
 			if (*s == c)
