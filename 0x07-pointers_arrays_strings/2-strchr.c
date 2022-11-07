@@ -10,11 +10,13 @@ char *_strchr(char *s, char c)
 {
 		while (*s)
 		{
+			/* checks if the string ended and returns NULL */
 			if (*s == '\0')
 				return (NULL);
-			else if (*s == c)
+			/* checks if the value is char c and returns the address */
+			if (*s == c)
 				return (s);
-			else
-				s++;
+			/* increments the pointer address if it is not c */
+			s++;
 		}
 }
