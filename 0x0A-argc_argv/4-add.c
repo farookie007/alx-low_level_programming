@@ -11,7 +11,7 @@ int _is_digit(char *s);
  *
  * Return: 0 (Success), 1 otherwise
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 	int sum = 0;
@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
  *
  * Return: 1 (Success), 0 otherwise
  */
-int _is_digit(char* s)
+int _is_digit(char *s)
 {
 	int i;
 
