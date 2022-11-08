@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
 /**
  * _is_digit - checks if a string is digit
- * @s - the string
+ * @s: the string
  *
  * Return: 1 (Success), 0 otherwise
  */
