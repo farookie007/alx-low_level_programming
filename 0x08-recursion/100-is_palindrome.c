@@ -29,5 +29,6 @@ int _palindrome(char *s, int i, int j)
 		return (1);
 	if (s[i] != s[j - 1])
 		return (0);
-	_palindrome(s, ++i, --j);
+
+	return (_palindrome(s, ++i, --j));
 }
