@@ -8,17 +8,22 @@
  */
 int is_palindrome(char *s)
 {
-	char copy[100];
-	int i = 0;
-	int j = strlen(s) - 1;
+	_palindrome(s, 0, strlen(s));
+}
 
-	strcpy(copy, s);
-	if (*(s + 1))
+/**
+ * _palindrome - tests if a string is palindrome recursively
+ * @s: the string to be tested
+ * @i: the starting index
+ * @j: the length of the string
+ *
+ * Return: 1 if the is a palindrome, 0 otherwise
+ */
+int _palindrome(char *s, int i, int j)
+{
+	if (s[i] == '\0')
 		return (1);
-	for (; s[i]; i++, j--)
-	{
-		if (s[i] != copy[j])
-			return (0);
-	}
-	return (1);
+	if (s[i] != s[j - 1])
+		return (0);
+	_palindrome(s, ++i, --j);
 }
