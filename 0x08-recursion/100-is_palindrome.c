@@ -1,5 +1,9 @@
 #include <string.h>
 
+/* prototype */
+int _palindrome(char *s, int i, int j);
+
+
 /**
  * is_palindrome - tests if a string is a palindrome
  * @s: the string to be tested
