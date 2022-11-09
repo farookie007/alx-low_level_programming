@@ -16,6 +16,10 @@ int main(int argc, char *argv[])
 	int i;
 	int sum = 0;
 
+	/* never going to happen but I have to use the argc variable
+	 * to silent the compiler */
+	if (argc < 1)
+		return (1);
 	for (i = 1; argv[i]; i++)
 	{
 		if (!(_is_digit(argv[i])))
