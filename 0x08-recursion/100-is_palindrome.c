@@ -12,7 +12,7 @@ int _palindrome(char *s, int i, int j);
  */
 int is_palindrome(char *s)
 {
-	_palindrome(s, 0, strlen(s));
+	return (_palindrome(s, 0, strlen(s)));
 }
 
 /**
