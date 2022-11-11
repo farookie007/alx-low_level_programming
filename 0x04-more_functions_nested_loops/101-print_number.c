@@ -8,9 +8,34 @@
  */
 void print_number(int n)
 {
-	n = n
-	print_number(
+	/* prints -ve sign if n is a negative integer */
+	if (n < 0)
+	{
+		n = -n;
+		_putchar('-');
+	}
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+	_print(n);
 }
 
+/**
+ * _print - prints an integer recursively using _putchar function
+ * @n: the integer to be printed
+ *
+ * Return: void
+ */
+void _print(int n)
+{
+	int rem;
 
-void
+	if (n == 0)
+		return;
+	rem = n % 10;
+	n /= 10;
+	_print(n);
+	_putchar('0' + rem);
+}
