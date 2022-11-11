@@ -17,7 +17,10 @@ char *_strncpy(char *dest, char *src, int n)
 		/* putting the characters from src into corresponding index in dest */
 		*(dest + i) = src[i];
 	}
-	*(dest + i + 1) = '\0';
+	while (i < n)
+	{
+		dest[i++] = '\0';
+	}
 
 	return (dest);
 }
