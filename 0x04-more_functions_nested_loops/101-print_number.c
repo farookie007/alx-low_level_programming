@@ -8,17 +8,17 @@
  */
 void print_number(int n)
 {
-	/* prints -ve sign if n is a negative integer */
-	if (n < 0)
-	{
-		n = -n;
-		_putchar('-');
-	}
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
+	if (n < 0)
+	{
+		n = -n;
+		_putchar('-');
+	}
+
 	_print(n);
 }
 
