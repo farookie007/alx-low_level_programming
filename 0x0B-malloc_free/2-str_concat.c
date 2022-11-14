@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * *str_concat - concatenates two strings
@@ -18,6 +19,10 @@ char *str_concat(char *s1, char *s2)
 	len2 = s2 ? strlen(s2) : 0;
 	total_len = len1 + len2;
 	s3 = malloc(sizeof(char) * (total_len + 1));
+
+	printf("len1 = %d\n", len1);
+	printf("len2 = %d\n", len2);
+	printf("total_len = %d\n", total_len);
 
 	/* if malloc failed */
 	if (s3 == NULL)
