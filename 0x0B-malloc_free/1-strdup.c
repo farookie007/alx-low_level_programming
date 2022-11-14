@@ -23,12 +23,10 @@ char *_strdup(char *str)
 
 	/* if malloc failed */
 	if (dup == NULL)
-		return (dup);
+		return (NULL);
 
-	for (i = 0; str[i]; i++)
-		*(dup + i) = str[i];
-
-	*(dup + i) = '\0';
+	while ((dup[i] = str[i]) != '\0')
+		i++;
 
 	return (dup);
 }
