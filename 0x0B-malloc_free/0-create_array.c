@@ -19,16 +19,14 @@ char *create_array(unsigned int size, char c)
 
 	p = (char *) malloc(sizeof(char) * size);
 
+	/* that is, malloc failed */
 	if (p == NULL)
-		return (0);
+		return (NULL);
 
-	while (i < size)
-	{
+	for (i = 0; i < size; i++)
 		*(p + i) = c;
-		i++;
-	}
 
-	*(p + i) = '\0';
+	*(p + size) = '\0';
 
 	return (p);
 }
