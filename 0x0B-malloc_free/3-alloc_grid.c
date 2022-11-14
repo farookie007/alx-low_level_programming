@@ -12,13 +12,15 @@
 int **alloc_grid(int width, int height)
 {
 	int **arr;
-	int i, r, c;
+	int r, c;
 
 	if (height <= 0 || width <= 0)
 		return (NULL);
 
+	/* reserve memory for `height` rows */
 	arr = (int **) malloc(height * sizeof(int *));
 
+	/* if malloc failed */
 	if (arr == NULL)
 	{
 		return (NULL);
@@ -26,16 +28,18 @@ int **alloc_grid(int width, int height)
 
 	for (r = 0; r < height; r++)
 	{
+		/* allocates memory for each row */
 		arr[r] = (int *) malloc(width * sizeof(int));
 		if (arr[r] == NULL)
 		{
 			free(arr);
-			for (i = 0; i <= r; i++)
-				free(arr[i]);
+			for (; r >= 0; r--)
+				free(arr[r]);
 			return (NULL);
 		}
 	}
 
+	/* fills the reserved memory with integer value of 0 */
 	for (r = 0; r < height; r++)
 	{
 		for (c = 0; c < width; c++)
