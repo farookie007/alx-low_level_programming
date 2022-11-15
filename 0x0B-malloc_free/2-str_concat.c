@@ -20,10 +20,6 @@ char *str_concat(char *s1, char *s2)
 	total_len = len1 + len2;
 	s3 = malloc(sizeof(char) * (total_len + 1));
 
-	printf("len1 = %d\n", len1);
-	printf("len2 = %d\n", len2);
-	printf("total_len = %d\n", total_len);
-
 	/* if malloc failed */
 	if (s3 == NULL)
 		return (NULL);
