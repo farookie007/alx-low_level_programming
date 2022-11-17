@@ -11,17 +11,17 @@
 char *argstostr(int ac, char **av)
 {
 	int i, j, k;
-	int size = 0;
+	int len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	for (i = 1; i < ac; i++)
 	{
-		size += strlen(av[i]);
+		len += strlen(av[i]);
 	}
 
-	char *str = (char *) malloc(sizeof(char) * (size + 1));
+	char *str = (char *) malloc(sizeof(char) * (len + 1));
 	/* if malloc fails */
 	if (str == NULL)
 		return NULL;
