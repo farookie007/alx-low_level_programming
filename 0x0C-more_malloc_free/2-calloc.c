@@ -24,7 +24,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	/* fills the array with zeroes */
-	_memset(ptr, '0', nmemb * size);
+	_memset(ptr, '0', nmemb);
 
 	return (ptr);
 }
