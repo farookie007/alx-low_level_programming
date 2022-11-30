@@ -7,6 +7,7 @@
  */
 int main(void)
 {
+	/* printing the filename using the __FILE__ macro */
 	printf("%s\n", __FILE__);
 	return (0);
 }
