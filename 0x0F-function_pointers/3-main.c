@@ -9,7 +9,7 @@
  *
  * Return: 0 - Success, otherwise - Error
  */
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
 	int (*f)(int, int);
 	char *operator;
@@ -18,7 +18,8 @@ int main(int argc, char argv[])
 	/* if invalid number of arguments is passed */
 	if (argc != 4)
 	{
-		printf("Error\n");
+		printf("argc = %d\n", argc);
+		printf("Error-argc!=4\n");
 		exit(98);
 	}
 
@@ -32,14 +33,14 @@ int main(int argc, char argv[])
 	/* if f is NULL */
 	if (!f)
 	{
-		printf("Error\n");
+		printf("Error-!f\n");
 		exit(99);
 	}
 
 	/* if user is tries '/' or '%' with b equals 0 */
-	if (((strcmp("/", operator) != 0) && (strcmp("%", operator) != 0)) || b != 0)
+	if (b == 0 && ((strcmp("/", operator) == 0) || strcmp("%", operator) == 0))
 	{
-		printf("Error\n");
+		printf("Error-strcmp()\n");
 		exit(100);
 	}
 
