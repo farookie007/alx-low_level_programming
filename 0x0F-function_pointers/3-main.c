@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int (*f)(int, int);
-	char *operator = NULL;
+	char *operator;
 	int a, b;
 
 	/* if invalid number of arguments is passed */
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	/* Assigning the variables */
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	strcpy(operator, argv[2]);
+	operator = argv[2];
 
 	f = get_op_func(operator);
 
