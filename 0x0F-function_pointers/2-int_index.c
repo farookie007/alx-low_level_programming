@@ -15,13 +15,13 @@ int int_index(int *array, int size, int (*cmp)(int))
 	/* returns -1 if size is less than or equal to 0 */
 	if (size <= 0)
 		return (-1);
-	
+
 	/* looping to check each element of the array */
 	for (i = 0; i < size; i++)
 	{
-		/* returns i if cmp is not equal to 0 */
+		/* returns i if cmp function does not return 0 */
 		if (cmp(array[i]) != 0)
-			return i;
+			return (i);
 	}
 	/* returns -1 if no element matches */
 	return (-1);
