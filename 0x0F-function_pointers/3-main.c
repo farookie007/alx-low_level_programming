@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int (*f)(int, int);
-	char *operator;
+	char *operator = NULL;
 	int a, b;
 
 	/* if invalid number of arguments is passed */
