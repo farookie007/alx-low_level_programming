@@ -26,6 +26,7 @@ int (*get_op_func(char *s))(int, int)
 		/* checking if the op_t type op matches the operator passed */
 		if (strcmp(ops[i].op, s) == 0)
 			return (ops[i].f);
+		i++;
 	}
 	/* if s does not match any of the expected operators */
 	return (NULL);
