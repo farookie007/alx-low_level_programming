@@ -10,6 +10,8 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
+	int i;
+
 	/* if array or action is undefined */
 	if (!array || !action)
 		return;
