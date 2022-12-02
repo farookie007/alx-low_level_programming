@@ -23,7 +23,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			str = "(nil)";
 		printf("%s", str);
 		/* if separator is pressent and it is the last element */
-		if (separator && i != (n-1))
+		if (separator && (i != n - 1))
 			printf("%s", separator);
 	}
 
