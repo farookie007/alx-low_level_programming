@@ -9,18 +9,19 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t nodes = 0;
+	size_t n = 0;
 
-	while(h)
+	while (h)
 	{
 		/* if the string part is NULL */
 		if (!h->str)
 			printf("[0] (nil)");
 		else
 			printf("[%u] %s", h->len, h->str);
+		printf("\n");
 		/* assigning h to be the next node */
+		n++;
 		h = h->next;
-		nodes++;
 	}
-	return (nodes);
+	return (n);
 }
