@@ -10,6 +10,7 @@
 size_t print_list(const list_t *h)
 {
 	size_t n = 0;
+
 	/* while the is not ended i.e the next element is not NULL*/
 	while (h)
 	{
@@ -19,6 +20,7 @@ size_t print_list(const list_t *h)
 		else
 			printf("[0] (nil)");
 		printf("\n");
+
 		/* incrementing the number of nodes */
 		n++;
 		/* assigning h to the next node */
