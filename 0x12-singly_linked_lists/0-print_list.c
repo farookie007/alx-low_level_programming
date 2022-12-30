@@ -26,7 +26,7 @@ size_t print_list(const list_t *h)
 		/* assigning h to the next node */
 		h = h->next;
 	}
-	
+
 	/* returning the number of nodes */
 	return (n);
 }
