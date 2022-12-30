@@ -9,12 +9,17 @@
  */
 size_t list_len(const list_t *h)
 {
-	size_t nodes = 0;
+	size_t len = 0;
 
+	/* while the is not ended i.e the next element is not NULL*/
 	while (h)
 	{
-		nodes++;
+		/* incrementing the number of nodes */
+		len++;
+		/* assigning the next node to h */
 		h = h->next;
 	}
-	return (nodes);
+
+	/* returning the number of nodes */
+	return (len);
 }
