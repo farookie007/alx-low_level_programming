@@ -62,15 +62,19 @@ free(list);
  */
 int main(void)
 {
+int i;
 listint_t *head;
 listint_t *n;
 
-head = _create_list(2, 9, 6);
-n = get_nodeint_at_index(head, 0);
+head = _create_list(2, 4, 6, 8, 10, 12, 14, 16, 18, 20);
+for (i = 0; i < 5; i++)
+{
+n = get_nodeint_at_index(head, i);
 if (n)
 printf("-> %d\n", n->n);
 else
 printf("(nil)\n");
+}
 _free_listint(head);
 return (0);
 }
