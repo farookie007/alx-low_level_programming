@@ -26,7 +26,10 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	/* if it is an empty list */
 	if ((*head) == NULL)
+	{
 	       (*head) = new;
+	       return (new);
+	}
 
 	/* traversing to the last element */	
 	while (prev->next)
@@ -35,6 +38,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	prev->next = new;
 
-	return (*head);
+	return (new);
 }
 
