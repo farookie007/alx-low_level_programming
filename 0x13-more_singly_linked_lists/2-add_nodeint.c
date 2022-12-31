@@ -18,8 +18,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	/* initializing the values of the new node */
 	new->n = n;
-	new->next = *head;
-	*head = new;
+	new->next = (*head);
+	(*head) = new;
 
 	return (new);
 }
