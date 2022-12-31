@@ -15,7 +15,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *prev = (*head);
 
 	new = (list_t *)malloc(sizeof(list_t *));
-	if malloc fails
+	/* if malloc fails */
 	if (!new)
 		return (NULL);
 
