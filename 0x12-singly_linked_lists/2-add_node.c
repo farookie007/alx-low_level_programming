@@ -20,11 +20,11 @@ list_t *add_node(list_t **head, const char *str)
 
 	/* initilaizing the new node's values */
 	new->str = strdup(str);
-	new->len = strlen(str);
-	new->next = *head;
+	new->len = (unsigned int)strlen(str);
+	new->next = (*head);
 
 	/* assigning the new head to address of the new node */
-	*head = new;
+	(*head) = new;
 
 	return (*head);
 }
