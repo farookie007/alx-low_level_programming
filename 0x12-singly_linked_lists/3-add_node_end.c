@@ -12,12 +12,11 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
-	list_t *prev;
+	list_t *prev = (*head);
 
 	new = (list_t *)malloc(sizeof(list_t *));
-	prev = (list_t *)malloc(sizeof(list_t *));
 	/* if malloc fails */
-	if (!new || !prev)
+	if (!new)
 		return (NULL);
 
 	/* initilaizing the new node's values */
@@ -25,7 +24,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->len = (unsigned int)strlen(str);
 	new->next = NULL;
 
-	prev = (*head);
+	/* if it is an empty list */
+	if ((*head) == NULL)
+	       (*head) = new;
+
+	/* traversing to the last element */	
 	while (prev->next)
 	{
 		prev = prev->next;
