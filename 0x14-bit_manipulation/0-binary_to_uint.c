@@ -26,7 +26,7 @@ unsigned int binary_to_uint(const char *b)
 
 		/* coverting to decimal by raising the power */
 		if (b[len] == '1')
-			total += 2**power
+			total += 2**power;
 	}
 
 	return (total);
