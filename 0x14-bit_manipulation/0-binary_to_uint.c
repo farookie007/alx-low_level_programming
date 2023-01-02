@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 /**
  * binary_to_uint - convert a binary number to an unsigned int
@@ -9,7 +10,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int len = strlen(b) - 1;
+	int len;
 	unsigned int power;
 	unsigned int total = 0;
 
@@ -18,7 +19,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 
 	/* converting the binary number to decimal */
-	for (power = 0, len; b[power]; len--, power++)
+	for (power = 0, len = strlen(b) - 1; b[power]; len--, power++)
 	{
 		/* checking if the element is either 1 or 0 */
 		if ((b[len] != '0') && (b[len] != '1'))
@@ -26,7 +27,7 @@ unsigned int binary_to_uint(const char *b)
 
 		/* coverting to decimal by raising the power */
 		if (b[len] == '1')
-			total += 2**power;
+			total += pow(2, power);
 	}
 
 	return (total);
