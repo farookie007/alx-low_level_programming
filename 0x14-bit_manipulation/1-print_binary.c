@@ -7,18 +7,20 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int temp;
-	int shifts;
+	unsigned long int temp = n;
 
+	/* if n == 0 */
 	if (n == 0)
 	{
-		printf("0");
+		putchar('0');
 		return;
 	}
 
-	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+	/* counting the number of shifts to be made */
+	for (shifts = 0; (temp >>= 1) | 0; shift++)
 		;
 
+	/* shifting through n at the known number of times */
 	for (; shifts >= 0; shifts--)
 	{
 		if ((n >> shifts) & 1)
