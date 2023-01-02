@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
-#include <math.h>
 
 /**
  * binary_to_uint - convert a binary number to an unsigned int
@@ -27,8 +26,31 @@ unsigned int binary_to_uint(const char *b)
 
 		/* coverting to decimal by raising the power */
 		if (b[len] == '1')
-			total += pow(2, power);
+			total += _pow(2, power);
 	}
 
 	return (total);
+}
+
+/**
+ * _pow - a function to calculate the result of `base` raised to a power
+ * of `power` where both are +ve integers
+ * @base: the base number
+ * @power: its exponent
+ *
+ * Return: the result of the calculation
+ */
+unsigned int _pow(unsigned int base, unsigned int power)
+{
+	unsigned int total = base;
+
+	/* if the power is 0 */
+	if (power == 0)
+		return (1);
+
+	/* calculating the power */
+	for (; power > 1; power--)
+		total *= base;
+
+	return total;
 }
