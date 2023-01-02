@@ -52,5 +52,5 @@ unsigned int _pow(unsigned int base, unsigned int power)
 	for (; power > 1; power--)
 		total *= base;
 
-	return total;
+	return (total);
 }
